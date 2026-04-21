@@ -9,7 +9,7 @@ def letter_grade(score):
         return 'D'
     return 'F'
 def is_passing(score):
-    pass 
+    return score >= 60 
 def average(scores):
     pass
 def curved_score(score, bonus):
