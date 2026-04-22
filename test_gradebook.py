@@ -22,4 +22,5 @@ def test_is_passing_false():
     assert is_passing(45) == False
 
 def test_is_passing_invalid_type():
-    assert is_passing("45") == False
+    with pytest.raises(TypeError):
+        is_passing("hello")
