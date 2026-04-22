@@ -19,7 +19,7 @@ def average(scores):
     if len(scores) == 0:
         raise ValueError
     if not all(isinstance(s, (int, float)) for s in scores): 
-        raise ValueError 
+        raise TypeError("all scores must be numbers")
     return round(sum(scores) / len(scores), 2) 
 def curved_score(score, bonus):
     pass 
