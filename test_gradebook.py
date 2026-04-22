@@ -26,4 +26,4 @@ def test_is_passing_invalid_type():
         is_passing("hello")
 
 def test_average_correct():
-    assert average([80, 90, 100]) == 90 
+    assert average([80, 90, 100]) == 90.0 
