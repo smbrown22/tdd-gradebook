@@ -46,3 +46,6 @@ def test_curved_score_true():
 def test_curved_score_too_high():
     assert curved_score(98, 10) == 100
     
+def test_curved_score_negative():
+    with pytest.raises(ValueError):
+        curved_score(80, -10)
