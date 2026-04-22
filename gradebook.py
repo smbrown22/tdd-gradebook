@@ -22,4 +22,14 @@ def average(scores):
         raise TypeError("all scores must be numbers")
     return round(sum(scores) / len(scores), 2) 
 def curved_score(score, bonus):
-    pass 
+    if not isinstance(score , (int, float)) and not isinsance(bonus, (int, float)):
+        raise TypeError("both score and bonus must be a number")
+
+    if bonus < 0: 
+        raise ValueError("bonus cannot be less than 0")
+    
+    if score + bonus > 100:
+        return 100
+    
+    else:
+        return score + bonus 

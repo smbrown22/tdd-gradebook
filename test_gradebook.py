@@ -42,3 +42,7 @@ def test_average_bad_items():
 
 def test_curved_score_true():
     assert curved_score(75, 10) == 85
+
+def test_curved_score_too_high():
+    assert curved_score(98, 10) == 100
+    
