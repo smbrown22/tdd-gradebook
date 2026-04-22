@@ -14,6 +14,8 @@ def letter_grade(score):
 def is_passing(score):
     return not letter_grade(score) == 'F'
 def average(scores):
+    if len(scores) == 0:
+        raise ValueError
     return round(sum(scores) / len(scores), 2) 
 def curved_score(score, bonus):
     pass 
