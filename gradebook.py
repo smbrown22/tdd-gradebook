@@ -27,9 +27,5 @@ def curved_score(score, bonus):
 
     if bonus < 0: 
         raise ValueError("bonus cannot be less than 0")
-    
-    if score + bonus > 100:
-        return 100
-    
     else:
-        return score + bonus 
+        return min(score + bonus, 100)
