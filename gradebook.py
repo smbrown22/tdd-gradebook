@@ -14,6 +14,8 @@ def letter_grade(score):
 def is_passing(score):
     return not letter_grade(score) == 'F'
 def average(scores):
+    if not isinstance(scores, list):
+        raise TypeError("scores must be a list")
     if len(scores) == 0:
         raise ValueError
     return round(sum(scores) / len(scores), 2) 
